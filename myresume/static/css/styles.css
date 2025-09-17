@@ -1,0 +1,12 @@
+body { 
+    font-family: system-ui, sans-serif; margin: 2rem; 
+}
+header { 
+    display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; 
+}
+nav a { 
+    margin-right: .75rem; text-decoration: none; border: 1px solid #ddd; padding: .4rem .7rem; border-radius: 8px; 
+}
+main { 
+    margin-top: 1.25rem; 
+}

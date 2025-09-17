@@ -1,0 +1,24 @@
+<!-- templates/base.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{% block title %}My Resume{% endblock %}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <header>
+    <h1>My Resume</h1>
+    <nav>
+      <a href="{% url 'resume:index' %}">Overview</a>
+      <a href="{% url 'resume:experience' %}">Experience</a>
+      <a href="{% url 'resume:education' %}">Education</a>
+      <a href="{% url 'resume:skills' %}">Skills</a>
+    </nav>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+  <footer><small>&copy; {{ now|date:"Y" }}</small></footer>
+</body>
+</html>
